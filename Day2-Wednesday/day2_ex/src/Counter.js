@@ -26,5 +26,5 @@ function Counter(props)
         </div>
     );
 }
- 
+
 export default Counter;

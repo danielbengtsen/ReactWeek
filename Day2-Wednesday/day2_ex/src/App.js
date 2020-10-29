@@ -1,6 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
 import Counter from './Counter';
+import {JokeFetcher} from './Fetcher';
+import MemberTable from './ListDemo';
 
 const interval = 5;
 let initialValue = 0;
@@ -15,6 +17,9 @@ function App() {
   return (
     <div className="App">
       <Counter initialValue={initialValue} interval={interval} />
+      <JokeFetcher />
+      
+      <MemberTable />
     </div>
   );
 }
