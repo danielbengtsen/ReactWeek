@@ -1,8 +1,20 @@
 import React from "react"
 import PropTypes from 'prop-types';
+import Facade from './../apiFacade';
 
 export default function AllPersons(props) {
   const { persons,editPerson,deletePerson} = props;
+
+  function printTableData()
+  {
+    persons.map((person) => `
+    <tr>
+      <td>${person.age}</td>
+      <td>${person.name}</td>
+      <td>${person.gender}</td>
+      <td>${person.email}</td>
+    </tr>`);
+  }
   
   return (
     <div>
@@ -11,7 +23,7 @@ export default function AllPersons(props) {
           <tr><th>Age</th><th>Name</th><th>Gender</th><th>Email</th></tr>
         </thead>
         <tbody>
-          {/*Add the rows here */}
+          {printTableData}
         </tbody>
       </table>
       
